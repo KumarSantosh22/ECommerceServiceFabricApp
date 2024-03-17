@@ -30,6 +30,11 @@ namespace ECommerce.ProductCatalog
             return (await _repository.GetAll()).ToArray();
         }
 
+        public async Task<Product> GetProductAsync(Guid productId)
+        {
+            return await _repository.Get(productId);
+        }
+
         /// <summary>
         /// Optional override to create listeners (e.g., HTTP, Service Remoting, WCF, etc.) for this service replica to handle client or user requests.
         /// </summary>
@@ -58,25 +63,25 @@ namespace ECommerce.ProductCatalog
             {
                 Id = Guid.NewGuid(),
                 Name = "Dell Monitor",
-                Description = "Description",
-                Price = 500.00,
-                Availaibility = 100
+                Description = "Computer Monitor",
+                Price = 500,
+                Availability = 100
             };
             Product product2 = new()
             {
                 Id = Guid.NewGuid(),
-                Name = "Dell Laptop",
-                Description = "Description",
-                Price = 5000.00,
-                Availaibility = 100
+                Name = "Surface Book",
+                Description = "Microsoft's Latest Laptop, i7 CPU, 1Tb SSD",
+                Price = 2200,
+                Availability = 15
             };
             Product product3 = new()
             {
                 Id = Guid.NewGuid(),
-                Name = "Dell Keyboard",
-                Description = "Description",
-                Price = 50.00,
-                Availaibility = 100
+                Name = "Arc Touch Mouse",
+                Description = "Computer Mouse, bluetooth, requires 2 AAA batteries",
+                Price = 60,
+                Availability = 30
             };
 
             _ = await _repository.Add(product1);

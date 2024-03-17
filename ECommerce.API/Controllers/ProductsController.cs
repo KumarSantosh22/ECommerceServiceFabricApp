@@ -33,7 +33,7 @@ namespace ECommerce.API.Controllers
                     Id = p.Id,
                     Name = p.Name,
                     Description = p.Description,
-                    IsAvailable = p.Availaibility > 0,
+                    IsAvailable = p.Availability > 0,
                     Price = p.Price
                 })
             );
@@ -48,7 +48,7 @@ namespace ECommerce.API.Controllers
                 Name = dto.Name,
                 Description = dto.Description,
                 Price = dto.Price,
-                Availaibility = 100
+                Availability = 100
             };
             await _productCatalogService.AddProductAsync(product);
             return Created();

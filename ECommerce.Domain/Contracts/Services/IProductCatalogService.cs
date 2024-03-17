@@ -7,5 +7,7 @@ namespace ECommerce.Domain.Contracts.Services
         Task<Product[]> GetAllProductsAsync();
 
         Task AddProductAsync(Product product);
+
+        Task<Product> GetProductAsync(Guid productId);
     }
 }

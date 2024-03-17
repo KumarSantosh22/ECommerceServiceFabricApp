@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Domain", "ECommer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.API", "ECommerce.API\ECommerce.API.csproj", "{DF1B47A1-7168-4EC4-809A-42AF635CA242}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserActor", "UserActor\UserActor.csproj", "{0715A241-405A-407E-8286-F2F2DC561356}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserActor", "UserActor\UserActor.csproj", "{0715A241-405A-407E-8286-F2F2DC561356}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserActor.Interfaces", "UserActor.Interfaces\UserActor.Interfaces.csproj", "{AF175C1B-2CC5-4849-BC89-E2BA2E4ACF8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserActor.Interfaces", "UserActor.Interfaces\UserActor.Interfaces.csproj", "{AF175C1B-2CC5-4849-BC89-E2BA2E4ACF8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.CheckoutService", "ECommerce.CheckoutService\ECommerce.CheckoutService.csproj", "{E4383CCB-2868-4EBD-A78D-26873534D59F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,14 @@ Global
 		{AF175C1B-2CC5-4849-BC89-E2BA2E4ACF8D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF175C1B-2CC5-4849-BC89-E2BA2E4ACF8D}.Release|x64.ActiveCfg = Release|Any CPU
 		{AF175C1B-2CC5-4849-BC89-E2BA2E4ACF8D}.Release|x64.Build.0 = Release|Any CPU
+		{E4383CCB-2868-4EBD-A78D-26873534D59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4383CCB-2868-4EBD-A78D-26873534D59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4383CCB-2868-4EBD-A78D-26873534D59F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E4383CCB-2868-4EBD-A78D-26873534D59F}.Debug|x64.Build.0 = Debug|Any CPU
+		{E4383CCB-2868-4EBD-A78D-26873534D59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4383CCB-2868-4EBD-A78D-26873534D59F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4383CCB-2868-4EBD-A78D-26873534D59F}.Release|x64.ActiveCfg = Release|Any CPU
+		{E4383CCB-2868-4EBD-A78D-26873534D59F}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
