@@ -23,7 +23,7 @@ namespace ECommerce.CheckoutService
 
         public async Task<CheckoutSummary> CheckoutAsync(string userId)
         {
-            var result = new CheckoutSummary();
+            CheckoutSummary result = new CheckoutSummary();
             result.Date = DateTime.UtcNow;
             result.Products = new List<CheckoutProduct>();
 
@@ -38,7 +38,7 @@ namespace ECommerce.CheckoutService
             foreach (BasketItem basketLine in basket)
             {
                 Product product = await catalogService.GetProductAsync(basketLine.ProductId);
-                var checkoutProduct = new CheckoutProduct
+                CheckoutProduct checkoutProduct = new CheckoutProduct
                 {
                     Product = product,
                     Price = product.Price,
@@ -60,7 +60,7 @@ namespace ECommerce.CheckoutService
 
         public async Task<CheckoutSummary[]> GetOrderHitoryAsync(string userId)
         {
-            var result = new List<CheckoutSummary>();
+            List<CheckoutSummary> result = new();
             IReliableDictionary<DateTime, CheckoutSummary> history =
                await StateManager.GetOrAddAsync<IReliableDictionary<DateTime, CheckoutSummary>>("history");
 
@@ -91,7 +91,7 @@ namespace ECommerce.CheckoutService
 
         private IProductCatalogService GetProductCatalogService()
         {
-            var proxyFactory = new ServiceProxyFactory(
+            ServiceProxyFactory proxyFactory = new ServiceProxyFactory(
                c => new FabricTransportServiceRemotingClientFactory());
 
             return proxyFactory.CreateServiceProxy<IProductCatalogService>(

@@ -38,7 +38,7 @@ namespace ECommerce.API
                     {
                         ServiceEventSource.Current.ServiceMessage(serviceContext, $"Starting Kestrel on {url}");
 
-                        var builder = WebApplication.CreateBuilder();
+                        WebApplicationBuilder builder = WebApplication.CreateBuilder();
 
                         builder.Services.AddSingleton<StatelessServiceContext>(serviceContext);
                         builder.WebHost
@@ -56,7 +56,7 @@ namespace ECommerce.API
                         builder.Services.AddControllers();
                         builder.Services.AddEndpointsApiExplorer();
                         builder.Services.AddSwaggerGen();
-                        var app = builder.Build();
+                        WebApplication app = builder.Build();
                         if (app.Environment.IsDevelopment())
                         {
                         app.UseSwagger();
