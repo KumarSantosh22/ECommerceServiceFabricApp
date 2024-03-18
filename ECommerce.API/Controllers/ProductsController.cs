@@ -9,7 +9,7 @@ using Microsoft.ServiceFabric.Services.Remoting.V2.FabricTransport.Client;
 namespace ECommerce.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
         private readonly IProductCatalogService _productCatalogService;
